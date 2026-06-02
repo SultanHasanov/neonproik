@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 44" fill="none">
+  <defs>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Tube symbol -->
+  <rect x="2" y="8" width="5" height="28" rx="2.5" fill="#00e5ff" filter="url(#glow)" opacity="0.9"/>
+  <rect x="2" y="8" width="16" height="5" rx="2.5" fill="#00e5ff" filter="url(#glow)" opacity="0.9"/>
+  <rect x="13" y="8" width="5" height="28" rx="2.5" fill="#00e5ff" filter="url(#glow)" opacity="0.9"/>
+  <!-- П -->
+  <rect x="22" y="8" width="16" height="5" rx="2.5" fill="#ffb347" filter="url(#glow)" opacity="0.9"/>
+  <rect x="22" y="8" width="5" height="28" rx="2.5" fill="#ffb347" filter="url(#glow)" opacity="0.9"/>
+  <rect x="33" y="8" width="5" height="28" rx="2.5" fill="#ffb347" filter="url(#glow)" opacity="0.9"/>
+  <!-- text -->
+  <text x="48" y="32" font-family="Unbounded, Montserrat, sans-serif" font-size="18" font-weight="700" fill="#f2f2f7" letter-spacing="0.5">НеонПро</text>
+  <text x="48" y="43" font-family="Manrope, sans-serif" font-size="8" font-weight="400" fill="#c8c8e0" letter-spacing="2">И К</text>
+</svg>
