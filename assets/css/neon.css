@@ -19,7 +19,7 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   font-family: 'Manrope', sans-serif;
@@ -207,19 +207,19 @@ section { padding: 80px 0; }
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
 }
 .np-hero-bg {
   position: absolute;
   inset: 0;
   background: url('../img/hero-bg.jpg') center/cover no-repeat;
-  filter: brightness(.65);
+  filter: brightness(.75);
 }
 .np-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, rgba(0,229,255,.1) 0%, rgba(10,10,15,.65) 55%, rgba(10,10,15,.85) 100%);
+  background: linear-gradient(160deg, rgba(0,229,255,.08) 0%, rgba(10,10,15,.45) 50%, rgba(10,10,15,.75) 100%);
 }
 .np-hero-content {
   position: relative;
@@ -802,27 +802,32 @@ section { padding: 80px 0; }
 @media (max-width: 768px) {
   section { padding: 56px 0; }
   .np-nav, .np-phone-badge { display: none; }
+  .np-header-cta .np-btn { display: none; }
   .np-burger { display: flex; }
   .np-hero-content {
-    padding: 96px 20px 48px;
+    padding: 80px 20px 48px;
     border-radius: 0;
     border-left: none;
     border-right: none;
-    background: rgba(10,10,15,.52);
+    background: rgba(10,10,15,.42);
     margin: 0 -20px;
   }
   .np-hero-desc { font-size: .95rem; margin-bottom: 24px; }
   .np-hero-actions { margin-bottom: 28px; }
   .np-hero-badges { gap: 8px; }
   .np-badge { font-size: .78rem; padding: 9px 12px; }
-  .np-form-wrap { padding: 32px 20px; }
-  .np-form-grid { grid-template-columns: 1fr; }
+  .np-form-wrap { padding: 24px 16px; }
+  .np-form-grid { grid-template-columns: 1fr; gap: 12px; }
+  .np-form-group input,
+  .np-form-group select,
+  .np-form-group textarea { font-size: .9rem; padding: 12px 14px; }
+  .np-form-submit .np-btn { width: 100%; justify-content: center; box-sizing: border-box; }
   .np-contacts-grid { grid-template-columns: 1fr; }
   .np-footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .np-page-body { padding: 32px 20px; }
 }
 @media (max-width: 480px) {
-  .np-hero-content { padding: 88px 16px 40px; margin: 0 -20px; border-radius: 0; }
+  .np-hero-content { padding: 76px 16px 40px; margin: 0 -20px; border-radius: 0; }
   .np-hero-actions { flex-direction: column; }
   .np-hero-actions .np-btn { justify-content: center; width: 100%; }
   .np-services-grid { grid-template-columns: 1fr; }
