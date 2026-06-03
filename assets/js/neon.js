@@ -238,6 +238,18 @@ function initPortfolio() {
 }
 initPortfolio();
 
+/* Cookie consent banner */
+const cookieBanner = document.querySelector('.np-cookie');
+if (cookieBanner) {
+  let accepted = false;
+  try { accepted = localStorage.getItem('np-cookie-consent') === '1'; } catch (e) {}
+  if (!accepted) cookieBanner.classList.add('show');
+  cookieBanner.querySelector('.np-cookie-accept')?.addEventListener('click', () => {
+    try { localStorage.setItem('np-cookie-consent', '1'); } catch (e) {}
+    cookieBanner.classList.remove('show');
+  });
+}
+
 /* Portfolio filters */
 document.querySelectorAll('.np-filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
