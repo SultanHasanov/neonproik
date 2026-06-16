@@ -157,7 +157,6 @@ section {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 16px 0;
   background: transparent;
   transition:
     background 0.3s,
@@ -177,11 +176,29 @@ section {
 }
 .np-logo {
   flex-shrink: 0;
+  position: relative;
+  display: inline-block;
 }
 .np-logo img {
-  height: 84px;
+  height: 140px;
   width: auto;
 }
+.np-logo-num {
+    position: absolute;
+    top: 29px;
+    left: 70%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    background: #1340a3;
+    padding: 2px 11px;
+    border-radius: 11px;
+    white-space: nowrap;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+  }
+  
 
 .np-nav {
   display: flex;
@@ -1399,4 +1416,23 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
   }
+  .np-logo img {
+  height: 84px;
+  width: auto;
+}
+.np-logo-num {
+        position: absolute;
+        top: 65px;
+        left: 53%;
+        transform: translateX(-50%);
+        font-size: 10px;
+        font-weight: 700;
+        color: #fff;
+        background: #1340a3;
+        padding: 1px 7px;
+        border-radius: 11px;
+        white-space: nowrap;
+        pointer-events: none;
+        letter-spacing: 0.5px;
+    }
 }
