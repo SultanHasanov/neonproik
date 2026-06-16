@@ -179,7 +179,7 @@ section {
   flex-shrink: 0;
 }
 .np-logo img {
-  height: 48px;
+  height: 84px;
   width: auto;
 }
 
@@ -308,7 +308,14 @@ section {
 .np-hero-bg {
   position: absolute;
   inset: 0;
-  background: url("../img/hero-bg.png") center/cover no-repeat;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0.45) 100%
+    ),
+    url("../img/hero-bg.png") center/cover no-repeat;
 }
 .np-hero-overlay {
   position: absolute;
@@ -365,7 +372,7 @@ section {
   justify-content: center;
   text-align: center;
   width: 100%;
-  padding: 0 20px;
+  padding: 20px 20px;
 }
 .np-hero-title {
   font-size: clamp(2.4rem, 6vw, 5rem);
